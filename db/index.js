@@ -3,11 +3,11 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 const pool = new Pool({
-    database: 'marketplace_ihde',
-    host: 'dpg-cj3jn6diuie55plej2c0-a',
-    port: 5432,
-    user: 'postgress',
-    password: 'iX8gdxeYlo9kDqJ1gAHK5hlODBnXFe3l'
+    database: 'railway',
+    host: 'containers-us-west-141.railway.app',
+    port: 6492,
+    user: 'postgres',
+    password: 'Q5j0VZJxMTgIpzOL2ANq'
 })
 
 export default pool
