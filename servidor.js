@@ -25,8 +25,8 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.listen(port, () => {
-    console.log('Servidor encendido con éxito', port)
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor escutando em 0.0.0.0:${port}`)
 })
 app.use('/upload', express.static('upload'));
 // Configura el destino donde se irá guardar la imagenes
