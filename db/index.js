@@ -3,7 +3,7 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 const pool = new Pool({
-    database: 'marketplace',
+    database: 'marketplace_ihde',
     host: 'dpg-cj3jn6diuie55plej2c0-a',
     port: 5432,
     user: 'postgress',
