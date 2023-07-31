@@ -18,11 +18,15 @@ import cors from 'cors'
 import editProductService from './services/Products/editProduct.js';
 
 const app = express()
+
+const port = process.env.PORT || 3000
+
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.listen(3002, () => {
-    console.log('Servidor encendido con éxito')
+
+app.listen(port, () => {
+    console.log('Servidor encendido con éxito', port)
 })
 app.use('/upload', express.static('upload'));
 // Configura el destino donde se irá guardar la imagenes
