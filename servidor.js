@@ -19,14 +19,14 @@ import editProductService from './services/Products/editProduct.js';
 
 const app = express()
 
-
+const port = process.env.PORT || 3000
 
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.listen('0.0.0.0', () => {
-    console.log(`Servidor escutando`)
+app.listen(port, () => {
+    console.log('Servidor encendido con éxito', port)
 })
 app.use('/upload', express.static('upload'));
 // Configura el destino donde se irá guardar la imagenes
