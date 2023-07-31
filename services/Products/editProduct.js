@@ -4,6 +4,7 @@ function EditProductService(req, res) {
     try {
         const { product_id } = req.params
         const { name, description, phone, price, category } = req.body
+        console.log(name, description, phone, price, category, product_id)
         if (req.file) {
             const photo = req.file.path
             EditProductController({name, description, phone, price, photo, category, product_id})
